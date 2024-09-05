@@ -12,7 +12,17 @@
         <button type="reset">Reset</button>
     </form>
     <?php
-        // tambahkan perhitungan volume tabung di sini
+        //cihuyy
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $jariJari = $_POST['jarijari'];
+            $tinggi = $_POST['tinggi'];
+            $phi = 3.14;
+    
+            $volume = $phi * $jariJari * $jariJari * $tinggi;
+    
+            echo "<p>Volume tabung adalah: " . $volume . "</p>";
+        }
     ?>
 </body>
 </html>
